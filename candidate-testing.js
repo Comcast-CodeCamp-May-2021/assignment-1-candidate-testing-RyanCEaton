@@ -25,13 +25,14 @@ for (let i = 0; i < 5; i++) {
 candidateAnswer = input.question(questions[i]);
 candidateAnswers.push(candidateAnswer);
   }
-console.log(candidateAnswers);
 }
 
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+
+  console.clear();
   console.log(`Candidate Name: ${candidateName}`);
   for (let i = 0; i < questions.length; i++) {
       console.log(questions[i]);
@@ -45,7 +46,8 @@ function gradeQuiz(candidateAnswers) {
       }
         }
   
-  let grade = numberCorrect / questions.length * 100;
+  let grade = 0;
+  grade = numberCorrect / questions.length * 100;
   
     console.log(`>>> Overall Grade: ${grade}% (${numberCorrect} of ${questions.length} responses correct) <<<`);
     if (grade >= '80') {
